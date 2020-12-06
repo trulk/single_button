@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tap.gd" type="Script" id=1]
+[ext_resource path="res://Bsts.gd" type="Script" id=2]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_select"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 454.0
+margin_top = 275.0
+margin_right = 563.0
+margin_bottom = 337.0
+shortcut = SubResource( 2 )
+text = "click!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownT" type="Timer" parent="Button"]
+wait_time = 3.5
+
+[node name="UpT" type="Timer" parent="Button"]
+wait_time = 2.0
+
+[node name="rek" type="Timer" parent="Button"]
+wait_time = 5.0
+
+[node name="Bsts" type="Label" parent="."]
+margin_left = 423.119
+margin_top = 138.892
+margin_right = 598.119
+margin_bottom = 219.892
+text = "wait"
+align = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="click" from="." to="Bsts" method="_on_Node2D_click"]
+[connection signal="hold" from="." to="Bsts" method="_on_Node2D_hold"]
+[connection signal="idle_b" from="." to="Bsts" method="_on_Node2D_idle_b"]
+[connection signal="short" from="." to="Bsts" method="_on_Node2D_short"]
+[connection signal="shorthold" from="." to="Bsts" method="_on_Node2D_shorthold"]
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="timeout" from="Button/DownT" to="." method="_on_DownT_timeout"]
+[connection signal="timeout" from="Button/UpT" to="." method="_on_UpT_timeout"]
+[connection signal="timeout" from="Button/rek" to="Bsts" method="_on_rek_timeout"]
