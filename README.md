@@ -8,3 +8,6 @@ connections for signals made for changing a label
 # to do
 implement signals so they work as intended.
 implement log for previous button actions.
+
+# useage
+place in projects file and scan it at Projects List window
