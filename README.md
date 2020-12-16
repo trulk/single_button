@@ -1,13 +1,9 @@
 # single_button
-Demo Godot application using a single button interface. 
-Version 0.01
+Demo application using a single button interface made in Godot.
 
-# progress
-connections for signals made for changing a label
+# Builds
+There is nothing worth exporting where the project stands currently. Once there is a user interface that can navigate in and out of a demo, you will likely find it on this page.
 
-# to do
-implement signals so they work as intended.
-implement log for previous button actions.
-
-# useage
-place in projects file and scan it at Projects List window
+# Useage
+Place the single_button folder from the projects-files branch into wherever you keep your godot projects. Then scan it at the Projects List window within godot to load it as a project.
+You can adapt the contents from this project to your own if you need to produce complex actions from a binary input.
