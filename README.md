@@ -1,10 +1,18 @@
 # single_button
-Demo Godot application using a single button interface. 
-Version 0.01
+Demo Godot application using a single button interface.
+
+Version 0.043
 
 # progress
-connections for signals made for changing a label
+Connected signals for button's state and cue labels.
+
+Timers moved to node above button (inputs can be swiched out easer).
+
+Signals now trigger closer to their expected behaviours.
 
 # to do
-implement signals so they work as intended.
-implement log for previous button actions.
+Implement log for previous button actions.
+
+Add counters for total and continuous presses.
+
+include UI elements to test interface.
